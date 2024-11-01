@@ -55,3 +55,7 @@ npm run dev
 **Frontend**: React.js, Tailwind CSS
 
 **Backend**: Node.js, Express.js, Tesseract.js, Multer
+
+## Sample Testing
+![image](https://github.com/user-attachments/assets/eb9f11c4-b3d8-42c8-a37a-f57004e26c63)
+![image](https://github.com/user-attachments/assets/5b135049-6f9b-400b-8c3d-0e8f44c74f9f)

@@ -16,18 +16,24 @@ The application utilizes OCR to extract the following fields:
 
 **Name**:
 Document Number
+
 Expiration Date
+
 DL Number (supports both formats: DL No: and DL No =)
 
 ## Example Input
 **Given a document containing**:
 Name: John Doe
+
 Document Number: ABC123456
+
 Expiration Date: 12/31/2025
+
 DL No: XYZ789
 
 ## API Endpoints
 upload_document: Accepts a file upload and processes it to extract data.
+
 extract_data: Returns extracted data in JSON format.
 
 ### Running the Application
@@ -47,4 +53,5 @@ npm run dev
 
 ### Technologies
 **Frontend**: React.js, Tailwind CSS
+
 **Backend**: Node.js, Express.js, Tesseract.js, Multer

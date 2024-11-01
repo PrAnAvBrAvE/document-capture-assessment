@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Document Capture Assessment
+This project is a document capture application using the MERN stack that extracts information from documents such as passports and driver's licenses using Optical Character Recognition (OCR) with Tesseract.js.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective
+To build a reliable document capture application that extracts key details like name, document number, and expiration date from various identification documents and presents them in a user-friendly manner.
 
-## Available Scripts
+## Structure
+- **Client**: React frontend (`client` folder)
+- **Server**: Node.js backend (`server` folder)
 
-In the project directory, you can run:
+## Bonus Feature - 
+Added error handling for incorrect document formats and invalid input handling during extraction.
 
-### `npm start`
+## Data Extraction
+The application utilizes OCR to extract the following fields:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Name**:
+Document Number
+Expiration Date
+DL Number (supports both formats: DL No: and DL No =)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Example Input
+**Given a document containing**:
+Name: John Doe
+Document Number: ABC123456
+Expiration Date: 12/31/2025
+DL No: XYZ789
 
-### `npm test`
+## API Endpoints
+upload_document: Accepts a file upload and processes it to extract data.
+extract_data: Returns extracted data in JSON format.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Running the Application
+**Server**:
+```bash
+cd server
+npm install
+node server.js
+```
 
-### `npm run build`
+**Client**:
+```bash
+cd client
+npm install
+npm run dev
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Technologies
+**Frontend**: React.js, Tailwind CSS
+**Backend**: Node.js, Express.js, Tesseract.js, Multer
